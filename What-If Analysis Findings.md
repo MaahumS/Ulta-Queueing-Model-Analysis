@@ -1,39 +1,69 @@
-# What-If Analysis Findings
+# 🔍 What-If Analysis Findings
 
-Our what-if analysis modeled several operational adjustments to determine how staffing and server efficiency influence wait times and service quality.
-
----
-
-## Scenario: Base Case with 3 Servers
-- **Impact**: Average wait time decreased by approximately 30%; maximum wait time reduced by around 2 minutes.
-- **Insight**: Adding a third server improves efficiency meaningfully while maintaining manageable costs.
+Our what-if analysis modeled several scenarios to determine how staffing, server efficiency, and the quantity of servers influence wait times and service quality.
 
 ---
 
-## Scenario: Base Case with 4 Servers
-- **Impact**: Only marginal improvement in wait times.
-- **Insight**: Additional labor cost outweighs performance gains. A fourth server is not cost-effective.
+### 🧪 Base Case with 3 Servers
+
+| Metric                   | Result                                     |
+|--------------------------|--------------------------------------------|
+| Avg Wait Time Change     | Decreased by ~30%                          |
+| Max Wait Time Change     | Decreased by ~2 minutes                    |
+| Key Insight              | More efficient than 2 servers, but incurs additional cost |
+
+![Base Case with 3 Servers Chart](images/basecase+3servers.png)
 
 ---
 
-## Scenario: 1 Server During Peak Traffic
-- **Impact**: Extremely high wait times and severe inefficiency.
-- **Insight**: Understaffing during peak hours results in poor service and customer dissatisfaction.
+### 🧪 Base Case with 4 Servers
+
+| Metric                   | Result                                     |
+|--------------------------|--------------------------------------------|
+| Avg Wait Time Change     | Marginal improvement                       |
+| Max Wait Time Change     | Marginal improvement                       |
+| Key Insight              | Minimal benefit, not cost-effective        |
+
+![Base Case with 4 Servers Chart](images/basecase+4servers.png) 
 
 ---
 
-## Scenario: 3 Servers During Peak Traffic
-- **Impact**: Average and maximum wait times cut in half.
-- **Insight**: A third server during peak periods offers strong performance gains and should be considered for strategic scheduling and cost minimization.
+### 🧪 1 Server During Peak Traffic
+
+| Metric                   | Result                                     |
+|--------------------------|--------------------------------------------|
+| Avg Wait Time            | Very high                                  |
+| Max Wait Time            | Extremely high                             |
+| Key Insight              | Severely inefficient, avoid with proper staffing|
+
+![Peak Traffic with 1 Server Chart](images/Peak+1server.png) 
 
 ---
 
-## Scenario: Slowest Server (Worst Efficiency)
-- **Input**: Base case interarrival rate with worst-performing server (2.24 min).
-- **Impact**: Average wait time increased to ~15 minutes; max wait time rose to 30 minutes.
-- **Insight**: Staff performance dramatically affects outcomes. Training and performance management are critical, but it is important to note that slow service times are not always in the server's control (large transactions, customer disputes, etc).
+### 🧪 3 Servers During Peak Traffic
+
+| Metric                   | Result                                     |
+|--------------------------|--------------------------------------------|
+| Avg Wait Time Change     | Cut in half                                |
+| Max Wait Time Change     | Cut in half                                |
+| Key Insight              | Improved efficiency and cost-effective  |
+
+![Peak Traffic with 3 Servers Chart](images/peak+3servers.png) 
 
 ---
 
-These scenarios validate that **targeted staffing increases during peak periods** yield the best return on investment, while excessive staffing or reliance on underperforming servers leads to inefficiencies or wasteful spending.
+### 🧪 Base Case with Slowest Server
+
+| Metric                   | Result                                     |
+|--------------------------|--------------------------------------------|
+| Avg Wait Time            | Increased to ~15 minutes                   |
+| Max Wait Time            | Increased to ~30 minutes                   |
+| Key Insight              | Server training and performance are critical |
+| NOTE:                    | Slow service times are not always in the server's control (large transactions, customer disputes, etc). |
+
+![Base Case with Slowest Service Rate Chart](images/slowestserver.png) 
+
+---
+
+Results: **Strategic staffing increases during peak periods** increases efficiency while minimizing cost
 
