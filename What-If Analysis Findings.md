@@ -52,7 +52,7 @@ Our what-if analysis modeled several scenarios to determine how staffing, server
 
 ---
 
-### 🧪 Base Case with Slowest Server
+### 🧪 Base Case with Slowest Service Rate
 
 | Metric                   | Result                                     |
 |--------------------------|--------------------------------------------|
