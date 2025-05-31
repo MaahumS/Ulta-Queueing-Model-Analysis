@@ -3,40 +3,58 @@
 This simulation modeled the Ulta Beauty store’s waiting line under three scenarios: base case, best case, and worst case. These scenarios were designed to reflect realistic variations in customer interarrival times and server efficiency, allowing us to estimate system performance under different operational conditions.
 
 ---
+## 📈 Base Case Scenario
 
-## Base Case Scenario
-- **Interarrival time**: 1.22 minutes
-- **Service rate**: 1.12 minutes
-- **Probability of waiting**: 0.61
-- **Average wait time**: 1.17 minutes
-- **Maximum wait time**: 6.40 minutes
-- **Probability of waiting more than 1 minute**: 0.39
+| Metric                                | Value         |
+|---------------------------------------|---------------|
+| Interarrival Time                     | 1.22 minutes  |
+| Service Rate                          | 1.12 minutes  |
+| Probability of Waiting                | 0.61          |
+| Average Wait Time                     | 1.17 minutes  |
+| Maximum Wait Time                     | 6.40 minutes  |
+| Probability of Waiting > 1 Minute     | 0.39          |
 
-The base case reflects a typical day using observed averages. While wait times are manageable, the 61% chance of waiting highlights a possible area for improvement in the future.
+![Base Case Chart](images/Basecase.png)
 
----
-
-## Best Case Scenario
-- **Interarrival time**: 2.0 minutes
-- **Service rate**: 0.39 minutes
-- **Probability of waiting**: 0.02
-- **Average wait time**: 0.01 minutes
-- **Maximum wait time**: 1.84 minutes
-- **Probability of waiting more than 1 minute**: 0.003
-
-This optimistic scenario assumes a slower customer arrival rate and highly efficient servers. Wait times are nearly nonexistent, showing that even small increases in service speed significantly enhance queue performance.
+- Base case values were calculated as the average interarrival rate and average service rate across all observations collected
+- The wait times are reasonable, but the 61% chance of waiting highlights a possible area for improvement in the future
 
 ---
 
-## Worst Case Scenario
-- **Interarrival time**: 0.83 minutes
-- **Service rate**: 2.24 minutes
-- **Probability of waiting**: 0.99
-- **Average wait time**: 266.47 minutes
-- **Maximum wait time**: 539.12 minutes
-- **Probability of waiting more than 20 minutes**: 0.97
+## 📈 Best Case Scenario
 
-This extreme case demonstrates how poor staffing and high customer volume can overwhelm the system. Nearly all customers wait, with unacceptable wait times that would severely impact customer satisfaction and store reputation. This situation should be avoided at all costs.
+| Metric                                | Value         |
+|---------------------------------------|---------------|
+| Interarrival Time                     | 2.00 minutes  |
+| Service Rate                          | 0.39 minutes  |
+| Probability of Waiting                | 0.02          |
+| Average Wait Time                     | 0.01 minutes  |
+| Maximum Wait Time                     | 1.84 minutes  |
+| Probability of Waiting > 1 Minute     | 0.003         |
+
+![Best Case Chart](images/Bestcase.png)
+
+- Best-case values assume the smallest interarrival rate and fastest service rate
+- Wait times are nearly nonexistent, and this scenario is highly efficient
+
+---
+
+## ⚠️ Worst Case Scenario
+
+| Metric                                | Value           |
+|---------------------------------------|-----------------|
+| Interarrival Time                     | 0.83 minutes    |
+| Service Rate                          | 2.24 minutes    |
+| Probability of Waiting                | 0.99            |
+| Average Wait Time                     | 266.47 minutes  |
+| Maximum Wait Time                     | 539.12 minutes  |
+| Probability of Waiting > 20 Minutes   | 0.97            |
+
+![Worst Case Chart](images/Worstcase.png)
+
+- Worst-case values assume the largest interarrival rate and the slowest service rate
+- Nearly all customers wait, with unacceptable wait times
+- This situation should be avoided at all costs!
 
 ---
 
